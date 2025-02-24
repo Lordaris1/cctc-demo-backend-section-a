@@ -20,21 +20,21 @@ exports.register = async (req, res) => {
 };
 
 // Login
-exports.login = async (req, res) => {
-  try {
-    const { email, password } = req.body;
-    const user = await User.findOne({ where: { email } });
+// exports.login = async (req, res) => {
+//   try {
+//     const { email, password } = req.body;
+//     const user = await User.findOne({ where: { email } });
 
-    if (!user || !(await bcrypt.compare(password, user.password))) {
-      return res.status(401).json({ error: 'Invalid credentials' });
-    }
+//     if (!user || !(await bcrypt.compare(password, user.password))) {
+//       return res.status(401).json({ error: 'Invalid credentials' });
+//     }
 
-    const token = generateToken(user);
-    res.json({ message: 'Login successful', token });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-};
+//     const token = generateToken(user);
+//     res.json({ message: 'Login successful', token });
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// };
 
 // Add User
 exports.addUser = async (req, res) => {
