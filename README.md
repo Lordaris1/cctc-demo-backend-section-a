@@ -1,39 +1,40 @@
 # 🚀 Express.js App
 
-This is a simple Express.js application. Follow the instructions below to install, configure, and run the app.
+A lightweight Express.js application designed for simplicity and ease of use. Follow the steps below to install, configure, and run the app locally.
 
 ---
 
 ## ✅ Prerequisites
 
-Ensure you have the following installed:
+Before starting, ensure the following are installed on your system:
 
-- [Node.js](https://nodejs.org) (v16 or higher recommended)  
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)  
+- [Node.js](https://nodejs.org) (v16 or higher recommended)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-To verify, run:
+Verify your installations by running:
 
 node -v
 npm -v
 
-Clone the repository
+🛠️ Setup Instructions
 
+1. Clone the Repository
 git clone <repository-url>
 
-Navigate to the project directory
-
+2. Navigate to the Project Directory
 cd <project-folder>
-Install dependencies
 
+3. Install Dependencies
 npm install
 # OR
 yarn install
 
-🔑 Environment Variables
-Create a .env file in the root directory and add the following variables:
-
+4. 🔑 Environment Variables
 PORT=5000
 
 
+5. 📦 Migrate the Data
+npx sequelize-cli db:migrate
 
-
+6. Run the Server
+node server.js
