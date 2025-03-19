@@ -26,15 +26,16 @@ cd <project-folder>
 
 3. Install Dependencies
 npm install
-# OR
+or
 yarn install
 
 4. 🔑 Environment Variables
 PORT=5000
 
+5. Setup the database
 
-5. 📦 Migrate the Data
+6. 📦 Migrate the Data
 npx sequelize-cli db:migrate
 
-6. Run the Server
+7. Run the Server
 node server.js
